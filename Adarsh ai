@@ -1,0 +1,67 @@
+AdarshAI/
+├── lib/
+│   ├── main.dart
+│   ├── screens/
+│   ├── services/
+│   ├── widgets/
+│   └── models/
+├── android/
+├── ios/
+├── pubspec.yaml
+└── README.md
+name: adarsh_ai
+description: Personal AI Assistant
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.2.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.6
+  http: ^1.2.0
+  speech_to_text: ^7.0.0
+  flutter_tts: ^4.0.2
+  permission_handler: ^11.3.0
+
+flutter:
+  uses-material-design: trueimport 'package:flutter/material.dart';
+
+void main() {
+  runApp(const AdarshAI());
+}
+
+class AdarshAI extends StatelessWidget {
+  const AdarshAI({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Adarsh AI',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        colorSchemeSeed: Colors.blue,
+        useMaterial3: true,
+      ),
+      home: const HomePage(),
+    );
+  }
+}
+
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Adarsh AI"),
+      ),
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () {},
+          child: const Text("Start
